@@ -1,0 +1,479 @@
+#SB_play{
+	-moz-binding: url("chrome://Shift-Box/content/SB_play.xml#toolbarbutton");
+}
+
+#SB_stop {
+	-moz-binding: url("chrome://Shift-Box/content/SB_stop.xml#toolbarbutton");
+}
+
+#SB_speedUp {
+	-moz-binding: url("chrome://Shift-Box/content/SB_speedUp.xml#toolbarbutton");
+}
+
+#SB_speedDown {
+	-moz-binding: url("chrome://Shift-Box/content/SB_speedDown.xml#toolbarbutton");
+}
+
+#SB_Options {
+	max-height: 0;
+}
+
+#SB_buttons dropmarker, #SB_buttons image { padding: 0; margin: 0; }
+
+treechildren::-moz-tree-cell(pause){
+    background-color: #998fc5;
+}
+
+.bgcolorThreadReplay {
+	background-color: #ECDCFA; 
+}
+
+[iconesize="large"].bStop {
+   list-style-image : url(chrome://Shift-Box/skin/controls.png);
+   -moz-image-region: rect(18px 31px 48px 0px);  /* rect(top, right, bottom, left); */   
+}
+
+[iconesize="large"].bPrevMail {
+   list-style-image : url(chrome://Shift-Box/skin/controls.png);
+   -moz-image-region: rect(10px 72px 48px 31px);  /* rect(top, right, bottom, left); */   
+}
+
+[iconesize="large"].bSpeedbackward {
+   list-style-image : url(chrome://Shift-Box/skin/controls.png);
+   -moz-image-region: rect(10px 114px 48px 73px);  /* rect(top, right, bottom, left); */   
+}
+
+[iconesize="large"].bPlay {
+   list-style-image : url(chrome://Shift-Box/skin/controls.png);
+   -moz-image-region: rect(0px 158px 48px 115px);  /* rect(top, right, bottom, left); */   
+}
+
+[iconesize="large"].bPause {
+   list-style-image : url(chrome://Shift-Box/skin/controls.png);
+   -moz-image-region: rect(0px 202px 48px 159px);  /* rect(top, right, bottom, left); */   
+}
+
+[iconesize="large"].bSpeed {
+   list-style-image : url(chrome://Shift-Box/skin/controls.png);
+   -moz-image-region: rect(10px 245px 48px 203px);  /* rect(top, right, bottom, left); */   
+}
+
+[iconesize="large"].bNextMail {
+   list-style-image : url(chrome://Shift-Box/skin/controls.png);
+   -moz-image-region: rect(10px 286px 48px 246px);  /* rect(top, right, bottom, left); */   
+}
+
+[iconesize="large"].bDStop {
+   list-style-image : url(chrome://Shift-Box/skin/controls.png);
+   -moz-image-region: rect(67px 31px 96px 0px);  /* rect(top, right, bottom, left); */   
+}
+
+[iconesize="large"].bDPrevMail {
+   list-style-image : url(chrome://Shift-Box/skin/controls.png);
+   -moz-image-region: rect(58px 72px 96px 31px);  /* rect(top, right, bottom, left); */  
+}
+
+[iconesize="large"].bDSpeedbackward {
+   list-style-image : url(chrome://Shift-Box/skin/controls.png);
+   -moz-image-region: rect(58px 114px 96px 73px);  /* rect(top, right, bottom, left); */   
+}
+
+[iconesize="large"].bDPlay {
+   list-style-image : url(chrome://Shift-Box/skin/controls.png);
+   -moz-image-region: rect(48px 158px 96px 115px);  /* rect(top, right, bottom, left); */   
+}
+
+[iconesize="large"].bDPause {
+   list-style-image : url(chrome://Shift-Box/skin/controls.png);
+   -moz-image-region: rect(48px 202px 96px 159px);  /* rect(top, right, bottom, left); */   
+}
+
+[iconesize="large"].bDSpeed {
+   list-style-image : url(chrome://Shift-Box/skin/controls.png);
+   -moz-image-region: rect(58px 245px 96px 203px);  /* rect(top, right, bottom, left); */   
+}
+
+[iconesize="large"].bDNextMail {
+   list-style-image : url(chrome://Shift-Box/skin/controls.png);
+   -moz-image-region: rect(58px 286px 96px 246px);  /* rect(top, right, bottom, left); */   
+}
+
+[iconesize="medium"].bStop {
+   list-style-image : url(chrome://Shift-Box/skin/controls.png);
+   -moz-image-region: rect(108px 20px 128px 0px);  /* rect(top, right, bottom, left); */   
+}
+
+[iconesize="medium"].bPrevMail {
+   list-style-image : url(chrome://Shift-Box/skin/controls.png);
+   -moz-image-region: rect(102px 48px 128px 21px);  /* rect(top, right, bottom, left); */   
+}
+
+[iconesize="medium"].bSpeedbackward {
+   list-style-image : url(chrome://Shift-Box/skin/controls.png);
+   -moz-image-region: rect(102px 76px 128px 48px);  /* rect(top, right, bottom, left); */   
+}
+
+[iconesize="medium"].bPlay {
+   list-style-image : url(chrome://Shift-Box/skin/controls.png);
+   -moz-image-region: rect(96px 105px 128px 76px);  /* rect(top, right, bottom, left); */   
+}
+
+[iconesize="medium"].bPause {
+   list-style-image : url(chrome://Shift-Box/skin/controls.png);
+   -moz-image-region: rect(96px 134px 128px 105px);  /* rect(top, right, bottom, left); */   
+}
+
+[iconesize="medium"].bSpeed {
+   list-style-image : url(chrome://Shift-Box/skin/controls.png);
+   -moz-image-region: rect(102px 163px 128px 135px);  /* rect(top, right, bottom, left); */   
+}
+
+[iconesize="medium"].bNextMail {
+   list-style-image : url(chrome://Shift-Box/skin/controls.png);
+   -moz-image-region: rect(102px 190px 128px 163px);  /* rect(top, right, bottom, left); */   
+}
+
+[iconesize="medium"].bDStop {
+   list-style-image : url(chrome://Shift-Box/skin/controls.png);
+   -moz-image-region: rect(141px 20px 160px 0px);  /* rect(top, right, bottom, left); */   
+}
+
+[iconesize="medium"].bDPrevMail {
+   list-style-image : url(chrome://Shift-Box/skin/controls.png);
+   -moz-image-region: rect(135px 48px 160px 21px);  /* rect(top, right, bottom, left); */   
+}
+
+[iconesize="medium"].bDSpeedbackward {
+   list-style-image : url(chrome://Shift-Box/skin/controls.png);
+   -moz-image-region: rect(135px 76px 160px 48px);  /* rect(top, right, bottom, left); */   
+}
+
+[iconesize="medium"].bDPlay {
+   list-style-image : url(chrome://Shift-Box/skin/controls.png);
+   -moz-image-region: rect(129px 105px 160px 76px);  /* rect(top, right, bottom, left); */   
+}
+
+[iconesize="medium"].bDPause {
+   list-style-image : url(chrome://Shift-Box/skin/controls.png);
+   -moz-image-region: rect(129px 134px 160px 105px);  /* rect(top, right, bottom, left); */   
+}
+
+[iconesize="medium"].bDSpeed {
+   list-style-image : url(chrome://Shift-Box/skin/controls.png);
+   -moz-image-region: rect(135px 163px 160px 135px);  /* rect(top, right, bottom, left); */   
+}
+
+[iconesize="medium"].bDNextMail {
+   list-style-image : url(chrome://Shift-Box/skin/controls.png);
+   -moz-image-region: rect(135px 190px 160px 163px);  /* rect(top, right, bottom, left); */   
+}
+
+[iconesize="small"].bStop {
+   list-style-image : url(chrome://Shift-Box/skin/controls.png);
+   -moz-image-region: rect(164px 15px 184px 0px);  /* rect(top, right, bottom, left); */   
+}
+
+[iconesize="small"].bPrevMail {
+   list-style-image : url(chrome://Shift-Box/skin/controls.png);
+   -moz-image-region: rect(164px 35px 184px 15px);  /* rect(top, right, bottom, left); */   
+}
+
+[iconesize="small"].bSpeedbackward {
+   list-style-image : url(chrome://Shift-Box/skin/controls.png);
+   -moz-image-region: rect(164px 55px 184px 35px);  /* rect(top, right, bottom, left); */   
+}
+
+[iconesize="small"].bPlay {
+   list-style-image : url(chrome://Shift-Box/skin/controls.png);
+   -moz-image-region: rect(160px 78px 184px 56px);  /* rect(top, right, bottom, left); */   
+}
+
+[iconesize="small"].bPause {
+   list-style-image : url(chrome://Shift-Box/skin/controls.png);
+   -moz-image-region: rect(160px 100px 184px 78px);  /* rect(top, right, bottom, left); */   
+}
+
+[iconesize="small"].bSpeed {
+   list-style-image : url(chrome://Shift-Box/skin/controls.png);
+   -moz-image-region: rect(164px 121px 184px 100px);  /* rect(top, right, bottom, left); */   
+}
+
+[iconesize="small"].bNextMail {
+   list-style-image : url(chrome://Shift-Box/skin/controls.png);
+   -moz-image-region: rect(164px 141px 184px 122px);  /* rect(top, right, bottom, left); */   
+}
+
+[iconesize="small"].bDStop {
+   list-style-image : url(chrome://Shift-Box/skin/controls.png);
+   -moz-image-region: rect(188px 15px 208px 0px);  /* rect(top, right, bottom, left); */   
+}
+
+[iconesize="small"].bDPrevMail {
+   list-style-image : url(chrome://Shift-Box/skin/controls.png);
+   -moz-image-region: rect(188px 35px 208px 15px);  /* rect(top, right, bottom, left); */   
+}
+
+[iconesize="small"].bDSpeedbackward {
+   list-style-image : url(chrome://Shift-Box/skin/controls.png);
+   -moz-image-region: rect(188px 55px 208px 35px);  /* rect(top, right, bottom, left); */   
+}
+
+[iconesize="small"].bDPlay {
+   list-style-image : url(chrome://Shift-Box/skin/controls.png);
+   -moz-image-region: rect(184px 100px 208px 78px);  /* rect(top, right, bottom, left); */   
+}
+
+[iconesize="small"].bDPause {
+   list-style-image : url(chrome://Shift-Box/skin/controls.png);
+   -moz-image-region: rect(184px 100px 208px 78px);  /* rect(top, right, bottom, left); */   
+}
+
+[iconesize="small"].bDSpeed {
+   list-style-image : url(chrome://Shift-Box/skin/controls.png);
+   -moz-image-region: rect(188px 121px 208px 100px);  /* rect(top, right, bottom, left); */   
+}
+
+[iconesize="small"].bDNextMail {
+   list-style-image : url(chrome://Shift-Box/skin/controls.png);
+   -moz-image-region: rect(188px 141px 208px 122px);  /* rect(top, right, bottom, left); */   
+}
+
+.Button-Label-hidden {
+	visibility: hidden;
+}
+
+
+/* Blue bubble (play label) */
+label[iconesize="medium"] {
+	font-size:11px; 
+	font-family: "Helvetica";
+	font-weight:bold;
+	color:white; 
+	background:#4f7aae; 
+	text-align:right;
+	-moz-border-radius: 8px; 
+	padding-bottom: 1px;
+}
+
+[iconesize="medium"].Button-Play-Label {
+	padding-right:3px;
+	margin: 5px 2px 10px 15px;
+}
+
+[iconesize="medium"].Button-Play-Label-sup10 { 
+	padding-right:3px; 
+	margin: 5px 2px 9px 10px;
+}
+
+[iconesize="medium"].Button-Play-Label-sup100 {
+	padding-right:2px;
+	margin: 5px 1px 10px 6px;
+}
+
+[iconesize="medium"].Button-Play-Label-sup1000 {
+	padding-right:2px;
+	margin: 5px 2px 9px 3px;
+}
+
+label[iconesize="large"] {
+	font-size:13px; 
+	font-family: "Helvetica";
+	font-weight:bold;
+	color:white; 
+	background:#4f7aae; 
+	text-align:right;
+	-moz-border-radius: 8px; 
+}
+
+[iconesize="large"].Button-Play-Label {
+	padding-right:3px;
+	margin: 7px 4px 22px 27px;
+}
+
+[iconesize="large"].Button-Play-Label-sup10 {
+	padding-right:3px;
+	margin: 5px 4px 25px 20px;
+}
+
+[iconesize="large"].Button-Play-Label-sup100 {
+	padding-right:3px;
+	margin: 5px 3px 25px 15px;
+}
+
+[iconesize="large"].Button-Play-Label-sup1000 {
+	padding-right:3px;
+	margin: 5px 3px 25px 7px;
+}
+
+label[iconesize="small"] {
+	font-size:11px; 
+	font-family: "Helvetica";
+	font-weight:bold;
+	color:white; 
+	background:#4f7aae; 
+	text-align:right;
+	-moz-border-radius: 8px; 
+	padding: 0;
+}
+
+[iconesize="small"].Button-Play-Label { 
+	padding-right:3px;
+	margin: 3px 2px 5px 10px;
+}
+
+[iconesize="small"].Button-Play-Label-sup10 {
+	padding-right:3px;
+	margin: 3px 2px 5px 4px;
+}
+
+[iconesize="small"].Button-Play-Label-sup100 {
+	font-size:9px; 
+	padding-right:3px;
+	margin: 3px 2px 9px 2px;
+}
+
+[iconesize="small"].Button-Play-Label-sup1000 {
+	font-size:9px; 
+	padding-right:1px;
+	margin: 3px 2px 9px 2px;
+}
+
+
+/* Red bubble (stop label) */
+[iconesize="medium"].Button-Stop-Label-inf10 {
+	font-size:11px; 
+	font-family: "Helvetica";
+	font-weight:bold;
+	color:white; 
+	background:#ff0000; 
+	padding-right:2px;
+	-moz-border-radius: 8px; 
+	margin-right:3px;
+	margin-top:3px;
+	margin-bottom:3px;
+	margin-left:5px;
+	text-align:right;
+}
+
+[iconesize="medium"].Button-Stop-Label {
+	font-size:11px; 
+	font-family: "Helvetica";
+	font-weight:bold;
+	color:white; 
+	background:#ff0000; 
+	padding-right:2px;
+	-moz-border-radius: 8px; 
+	margin-right:2px;
+	margin-top:3px;
+	margin-bottom:3px;
+	margin-left:4px;
+	text-align:right;
+}
+
+[iconesize="large"].Button-Stop-Label-inf10 {
+	font-size:11px; 
+	font-family: "Helvetica";
+	font-weight:bold;
+	color:white; 
+	background:#ff0000; 
+	padding-right:3px;
+	padding-left: 3px;
+	-moz-border-radius: 8px; 
+	margin-right:5px;
+	margin-top:5px;
+	margin-bottom:10px;
+	margin-left:13px;
+	text-align:right;
+}
+
+[iconesize="large"].Button-Stop-Label {
+	font-size:11px; 
+	font-family: "Helvetica";
+	font-weight:bold;
+	color:white; 
+	background:#ff0000; 
+	padding-right:3px;
+	padding-left: 3px;
+	-moz-border-radius: 8px; 
+	margin-right:3px;
+	margin-top:5px;
+	margin-bottom:10px;
+	margin-left:9px;
+	text-align:right;
+}
+
+[iconesize="small"].Button-Stop-Label-inf10 {
+	font-size:10px; 
+	font-family: "Helvetica";
+	font-weight:bold;
+	color:white; 
+	background:#ff0000; 
+	padding-right: 1px;
+	-moz-border-radius: 6px; 
+	margin-right:2px;
+	margin-top:4px;
+	margin-bottom:2px;
+	margin-left:5px;
+	text-align:right;
+}
+
+[iconesize="small"].Button-Stop-Label {
+	font-size:10px; 
+	font-family: "Helvetica";
+	font-weight:bold;
+	color:white; 
+	background:#ff0000; 
+	padding: 0;
+	-moz-border-radius: 6px; 
+	margin-right:1px;
+	margin-top:4px;
+	margin-bottom:2px;
+	margin-left:2px;
+	text-align:right;
+}
+
+/* Green bubble (speeds label) */
+[iconesize="medium"].Button-Speed-Label {
+	font-size:11px; 
+	font-family: "Helvetica";
+	font-weight:bold;
+	color:white; 
+	background:#00a500; 
+	padding-right:2px;
+	-moz-border-radius: 8px; 
+	margin-right:2px;
+	margin-top:3px;
+	margin-bottom:5px;
+	margin-left:10px;
+	text-align:right;
+}
+
+[iconesize="large"].Button-Speed-Label {
+	font-size:13px; 
+	font-family: "Helvetica";
+	font-weight:bold;
+	color:white; 
+	background:#00a500; 
+	padding-right:3px;
+	-moz-border-radius: 8px; 
+	margin-right:4px;
+	margin-top:7px;
+	margin-bottom:15px;
+	margin-left:19px;
+	text-align:right;
+}
+
+[iconesize="small"].Button-Speed-Label {
+	font-size:9px; 
+	font-family: "Helvetica";
+	font-weight:bold;
+	color:white; 
+	background:#00a500; 
+	padding-right:1px;
+	-moz-border-radius: 8px; 
+	margin-right:2px;
+	margin-top:1px;
+	margin-bottom:3px;
+	margin-left:3px;
+	text-align:right;
+}

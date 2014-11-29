@@ -1,0 +1,16 @@
+<!ENTITY SHB "Shift-Box">
+<!ENTITY SB_Options "Options">
+<!ENTITY SB_LabelSize "Buttons size:">
+<!ENTITY SB_LargeSize "Large size">
+<!ENTITY SB_MediumSize "Medium size">
+<!ENTITY SB_SmallSize "Small size">
+<!ENTITY SB_HideSHB "Do not display">
+<!ENTITY SB_GeneralConfiguration "General">
+<!ENTITY SB_Launching "When Thunderbird starts:">
+<!ENTITY SB_BuffLabel "Come back to the previous session state, buffering new messages">
+<!ENTITY SB_NotifTab "Notifications">
+<!ENTITY SB_Notifications "Buttons notifications:">
+<!ENTITY SB_NotNotify "No bubble notification at all">
+<!ENTITY SB_BinNotify "Only an empty bubble">
+<!ENTITY SB_CouNotify "Bubble and items count">
+

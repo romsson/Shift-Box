@@ -1,0 +1,10 @@
+content   Shift-Box                 chrome/content/
+skin      Shift-Box   classic/1.0   chrome/skin/
+locale    Shift-Box   en-US         chrome/locale/en-US/
+locale    Shift-Box   fr            chrome/locale/fr/
+
+style chrome://global/content/customizeToolbar.xul chrome://Shift-Box/skin/overlay.css
+
+# Thunderbird mail
+overlay	chrome://messenger/content/messenger.xul chrome://Shift-Box/content/SHB.xul
+

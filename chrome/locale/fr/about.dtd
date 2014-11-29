@@ -1,0 +1,11 @@
+﻿<!ENTITY about "A propos">
+<!ENTITY version "Version:">
+<!ENTITY createdBy "Créé par:">
+<!ENTITY homepage "Site web:">
+<!ENTITY shortcuts "Raccourcis clavier :">
+<!ENTITY sc_play "Lecture/Pause : ">
+<!ENTITY sc_stop "Arrêt :">
+<!ENTITY sc_prev "Email précédent :">
+<!ENTITY sc_next "Email suivant :">
+<!ENTITY sc_prevN "Parcourir 10 messages précédents à la fois :">
+<!ENTITY sc_nextN "Parcourir 10 messages suivants à la fois :">

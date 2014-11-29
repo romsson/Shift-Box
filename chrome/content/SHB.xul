@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="chrome://Shift-Box/skin/SHB.css"?>
+
+<!DOCTYPE overlay SYSTEM "chrome://Shift-Box/locale/overlay.dtd">
+<overlay id="shiftBox-overlay" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+	<stringbundleset id="stringbundleset">
+		<stringbundle id="SB_strings" src="chrome://Shift-Box/locale/overlay.properties"/>
+	</stringbundleset>
+
+	<script type="application/javascript" src="chrome://Shift-Box/content/ShiftBox.js"/>
+	<script type="application/javascript" src="chrome://Shift-Box/content/SB_DB.js"/>
+	<script type="application/javascript" src="chrome://Shift-Box/content/SB_VirtualFolder.js"/>
+	<script type="application/javascript" src="chrome://Shift-Box/content/SB_Options.js"/>
+	<script type="application/javascript" src="chrome://Shift-Box/content/SB_Controllers.js"/>  
+	<script type="application/javascript" src="chrome://Shift-Box/content/SB_Manager.js"/>
+	
+<!-- Shift-Box Shortcuts -->
+<keyset>
+	<key id="SB_sc_play" modifiers="alt" key="P" oncommand="SHB.Manager.Play();" />
+	<key id="SB_sc_stop" modifiers="alt" key="S" oncommand="SHB.Manager.Stop();" />
+	<key id="SB_sc_prev" modifiers="alt" keycode="VK_UP" oncommand="SHB.Manager.PreviousMail();" />
+	<key id="SB_sc_next" modifiers="alt" keycode="VK_DOWN" oncommand="SHB.Manager.NextMail();" />
+	<key id="SB_sc_preN" modifiers="alt" keycode="VK_PAGE_UP" oncommand="SHB.Manager.SelectMessage(SHB.PREVIOUS, SHB.Manager.folders[SHB.Manager.folderURI].cursor - 10);" />
+	<key id="SB_sc_nexN" modifiers="alt" keycode="VK_PAGE_DOWN" oncommand="SHB.Manager.SelectMessage(SHB.NEXT, SHB.Manager.folders[SHB.Manager.folderURI].cursor + 10);" />
+</keyset>
+
+<!-- Shift-Box buttons -->
+<toolbar id="mail-bar3">
+	<toolbaritem id="SB_buttons">	
+		<!-- Not yet used -->
+		<toolbarbutton id="SB_filter" 
+			type="menu"
+			label="Filtrage"
+			hidden="true">
+			<menupopup>
+				<menuitem	id="SB_all_emails"
+							label="Afficher tous les emails de ce dossier"
+							oncommand="SHB.Manager.FilterFolder(0);" 
+							disabled="true" />
+							
+				<menuitem	id="SB_todays_emails"
+							label="Afficher les emails de ce dossier reçus aujourd'hui seulement"
+							oncommand="SHB.Manager.FilterFolder(1);" />
+							
+				<menuitem	id="SB_session_emails"
+							label="Afficher les emails de ce dossier reçus depuis l'ouverture de Thunderbird seulement"
+							oncommand="SHB.Manager.FilterFolder(2);" />
+			</menupopup>
+		</toolbarbutton>
+		
+		<!--<menupopup id="SB_stopMenu">
+			<menuitem 	id="SB_stopAllFolders"
+						label="Stop all folders"
+						oncommand="SHB.Manager.StopFolders();" />
+		</menupopup>-->
+		
+		<toolbarbutton id="SB_stop"
+			flex="0"
+			type="menu-button"
+			tooltiptext="&SB_stop;"
+			class="bDStop" 
+			disabled="false"
+			iconesize="medium"
+		/>
+			
+		<toolbarbutton id="SB_prevMail"
+			flex="0"
+			type="menu"
+			tooltiptext="&SB_previous;"
+			class="bDPrevMail"
+			disabled="true"
+			iconesize="medium"	
+		>	
+			<menupopup id="SB_prevMenu">
+				<menuitem 	id="SB_replay_today"
+							oncommand="SHB.Manager.LowerBound(0);" />
+							
+				<menuitem 	id="SB_replay_session"
+							oncommand="SHB.Manager.LowerBound(1);" />
+							
+				<menuitem 	class="menuitem-iconic" 
+							image="chrome://Shift-Box/skin/back-begin.png" 
+							label="&SB_beg_folder;"
+							oncommand="SHB.Manager.SelectMessage(SHB.PREVIOUS, -1);" />
+							
+				<menuitem 	class="menuitem-iconic"
+							acceltext="ALT+UP"
+							image="chrome://Shift-Box/skin/back-prev.png" 
+							label="&SB_previous;" 
+							oncommand="SHB.Manager.PreviousMail(null);" />
+				<menuseparator value="sep" />
+			</menupopup>
+		</toolbarbutton>
+			
+		<toolbarbutton id="SB_speedDown"
+			flex="0"
+			type="menu-button"
+			tooltiptext="&SB_speedDown;"		
+			class="bDSpeedbackward"
+			disabled="true"
+			iconesize="medium"
+			/>
+		
+		<toolbarbutton id="SB_play"
+			flex="0"
+			type="menu-button"
+			tooltiptext="&SB_play;"
+			class="bDPause"
+			disabled="true"
+			iconesize="medium"		
+			/>
+			
+		<toolbarbutton id="SB_speedUp"
+			flex="0"
+			type="menu-button"
+			tooltiptext="&SB_speedUp;"
+			class="bDSpeed"
+			disabled="true"
+			iconesize="medium"		
+			/>	
+			
+		<toolbarbutton id="SB_nextMail"
+			flex="0"
+			type="menu"
+			tooltiptext="&SB_next;"
+			class="bDNextMail"
+			disabled="true"
+			iconesize="medium"	
+		>	
+			<menupopup id="SB_nextMenu">
+				<menuitem 	class="menuitem-iconic"
+							image="chrome://Shift-Box/skin/go-end.png" 
+							label="&SB_end_folder;"
+							oncommand="SHB.Manager.SelectMessage(SHB.NEXT, SHB.Manager.folders[SHB.Manager.folderURI].listDates.length - 1);" />
+							
+				<menuitem 	class="menuitem-iconic"
+							acceltext="ALT+DOWN"
+							image="chrome://Shift-Box/skin/go-next.png" 
+							label="&SB_next;" 
+							oncommand="SHB.Manager.NextMail(null);" />
+				<menuseparator value="sep" />
+			</menupopup>
+		</toolbarbutton>
+	</toolbaritem>
+</toolbar>
+
+<!-- Email context menu -->
+<popup id="mailContext">
+    <menuitem 	id="SB_replay_from"
+				class="menuitem-iconic"
+				image="chrome://Shift-Box/skin/back-begin.png" 
+				oncommand="SHB.Manager.ReplayFromEmail();"/>
+	
+	<!-- Not yet implemented -->
+		<!--
+    <menuitem 	id="SB_pause_thread"
+				class="menuitem-iconic"
+				image="chrome://Shift-Box/skin/pause.png" 
+				label="Mettre en pause cette conversation"
+				oncommand="SHB.Manager.PauseThread()"/>
+		-->
+</popup>
+
+</overlay>

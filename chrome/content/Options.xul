@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<!DOCTYPE dialog SYSTEM "chrome://Shift-Box/locale/options.dtd"> 
+<dialog
+	id="SB_Options"
+	title="&SHB; &SB_Options;" 
+	xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+	ondialogaccept="SHB_Options.SaveOptions();"
+	ondialogcancel="SHB_Options.Cancel();"
+	onload="SHB_Options.Init();"
+	buttons="accept, cancel"
+	persist="screenX screenY width height sizemode">
+	<script type="application/javascript" src="chrome://Shift-Box/content/SB_Options.js"/> 
+	<tabbox>
+		<tabs>
+			<tab label="&SB_GeneralConfiguration;"/>
+			<tab label="&SB_NotifTab;"/>
+		</tabs>
+		<tabpanels>
+			<tabpanel>
+				<vbox>
+					<text value="&SB_LabelSize;"/>
+					<radiogroup id="SB_ButtonSize" value="">
+						<radio id="SB_buttonLSize" label="&SB_LargeSize;" value="0" oncommand="SHB_Options.ButtonsSize(0); this.parentNode.value = 0"/>
+						<radio id="SB_buttonMSize" label="&SB_MediumSize;" value="1" oncommand="SHB_Options.ButtonsSize(1); this.parentNode.value = 1"/>
+						<radio id="SB_buttonSSize" label="&SB_SmallSize;" value="2" oncommand="SHB_Options.ButtonsSize(2); this.parentNode.value = 2"/>
+						<radio id="SB_buttonHSize" label="&SB_HideSHB;" value="-1" oncommand="SHB_Options.ButtonsSize(-1); this.parentNode.value = -1"/>
+					</radiogroup>
+										
+					<text value="&SB_Launching;"/>
+					<checkbox id="SB_buff" label="&SB_BuffLabel;" checked="false" />
+				</vbox>
+			</tabpanel>
+			
+			<tabpanel>
+				<vbox>
+					<text value="&SB_Notifications;"/>
+					<radiogroup id="SB_notifications" value="">
+						<radio id="SB_notNoti" label="&SB_NotNotify;" value="0" oncommand="SHB_Options.Notifications(0); this.parentNode.value = 0"/>
+						<radio id="SB_binNoti" label="&SB_BinNotify;" value="1" oncommand="SHB_Options.Notifications(1); this.parentNode.value = 1"/>
+						<radio id="SB_couNoti" label="&SB_CouNotify;" value="2" oncommand="SHB_Options.Notifications(2); this.parentNode.value = 2"/>
+					</radiogroup>
+				</vbox>
+			</tabpanel>
+		</tabpanels>
+	</tabbox>
+</dialog>

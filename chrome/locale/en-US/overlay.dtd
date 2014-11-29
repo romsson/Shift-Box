@@ -1,0 +1,9 @@
+<!ENTITY SB_stop "Stop">
+<!ENTITY SB_previous "Previous mail">
+<!ENTITY SB_speedDown "SPEED BACKWARD">
+<!ENTITY SB_play "Play">
+<!ENTITY SB_speedUp "SPEED UP">
+<!ENTITY SB_next "Next mail">
+<!ENTITY SB_beg_folder "Back to top">
+<!ENTITY SB_end_folder "Go to end">
+
